@@ -17,5 +17,64 @@
     /* TEXT */
     --text-color-primary: #313131;
     --text-color-secondary: #6C6C6C;
+}
 
+/* UTILITY */
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.bg-color {
+    background: var(--surface-color);
+}
+
+.container {
+    padding: 1rem;
+}
+
+body {
+    font: 400 1rem/1.5 "Poppins";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    justify-content: space-between;
+
+    & ul[role="list"] {
+        list-style-type: none;
+        gap: 1rem;
+
+        & li:nth-child(4) img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+}
+
+@media (width >= 80em) {
+    .desktop-only {
+        display: block;
+    }
+
+    .container {
+        padding: 1.25rem 2rem;
+    }
+
+    nav {
+        & ul[role="list"] {
+            gap: 1.25rem;
+        }
+    }
 }
