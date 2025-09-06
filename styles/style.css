@@ -24,6 +24,10 @@
     display: flex;
 }
 
+.grid {
+    display: grid;
+}
+
 .items-center {
     align-items: center;
 }
@@ -40,25 +44,71 @@
     padding: 1rem;
 }
 
-body {
-    font: 400 1rem/1.5 "Poppins";
-}
-
 a {
     text-decoration: none;
     color: inherit;
+}
+
+ul[role="list"] {
+    list-style-type: none;
 }
 
 nav {
     justify-content: space-between;
 
     & ul[role="list"] {
-        list-style-type: none;
         gap: 1rem;
+
+        & li a {
+            font: 400 1rem/1.5 "Poppins";
+            color: var(--text-color-secondary);
+        }
 
         & li:nth-child(4) img {
             width: 2.5rem;
             height: 2.5rem;
+        }
+    }
+}
+
+header {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+
+    & .main {
+        & img {
+            width: 7.5rem;
+            height: 7.5rem;
+            margin-bottom: 1rem;
+        }
+
+        & h1 {
+            color: var(--text-color-primary);
+            font: 600 1.5rem/1.25 "Poppins";
+            margin-bottom: .5rem;
+        }
+
+        & p {
+            color: var(--text-color-secondary);
+            font: 400 .875rem/1.70 "Poppins";
+        }
+    }
+
+    & .info {
+        & ul[role="list"] {
+            gap: 1rem;
+
+            & img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            & li {
+                gap: .5rem;
+                color: var(--text-color-secondary);
+                font: 400 .875rem/1.70 "Poppins";
+            }
         }
     }
 }
@@ -69,12 +119,41 @@ nav {
     }
 
     .container {
-        padding: 1.25rem 2rem;
+        padding: 1.25rem 2rem 0 2rem;
     }
 
     nav {
         & ul[role="list"] {
             gap: 1.25rem;
+        }
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 2rem;
+
+        & .main {
+            max-width: 37rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+
+            & img {
+                width: initial;
+                height: initial;
+                margin: 0;
+            }
+
+            & h1 {
+                font: 600 2rem/1.25 "Poppins";
+            }
+        }
+
+        & .info {
+            max-width: 17.5rem;
+            width: 100%;
         }
     }
 }
