@@ -46,7 +46,12 @@
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--text-color-secondary);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--brand-color);
 }
 
 ul[role="list"] {
@@ -59,9 +64,12 @@ nav {
     & ul[role="list"] {
         gap: 1rem;
 
-        & li a {
-            font: 400 1rem/1.5 "Poppins";
-            color: var(--text-color-secondary);
+        & li {
+            cursor: pointer;
+            
+            & a {
+                font: 400 1rem/1.5 "Poppins";
+            }
         }
 
         & li:nth-child(4) img {
