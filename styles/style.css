@@ -121,6 +121,18 @@ main {
     }
 }
 
+footer {
+    text-align: center;
+    color: var(--text-color-secondary);
+    font: 400 .875rem/1.70 "Poppins";
+    gap: 1rem;
+
+    & .links {
+        justify-content: center;
+        gap: 1.25rem;
+    }
+}
+
 @media (width >= 80em) {
     .desktop-only {
         display: block;
@@ -168,10 +180,19 @@ main {
     main {
         gap: 1.5rem;
         grid-template-columns: repeat(4, 1fr);
-
-        .container {
+        
+        &.container {
             padding: 1.5rem 2rem 0 2rem;
         }
     }
 
+    footer {
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+
+        &.container {
+            padding: 1.5rem 2rem;
+        }
+    }
 }
