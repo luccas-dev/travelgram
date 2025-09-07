@@ -113,6 +113,14 @@ header {
     }
 }
 
+main {
+    gap: 1rem;
+
+    & img {
+        width: 100%;
+    }
+}
+
 @media (width >= 80em) {
     .desktop-only {
         display: block;
@@ -156,4 +164,14 @@ header {
             width: 100%;
         }
     }
+
+    main {
+        gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+
+        .container {
+            padding: 1.5rem 2rem 0 2rem;
+        }
+    }
+
 }
